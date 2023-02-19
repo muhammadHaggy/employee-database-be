@@ -24,7 +24,7 @@ export class EmployeesService {
   }
 
   update(id: number, updateEmployeeDto: UpdateEmployeeDto) {
-    return this.employeesRepository.save({id, ...updateEmployeeDto});
+    return this.employeesRepository.update(id, {...updateEmployeeDto});
   }
 
   async remove(id: number): Promise<void> {
