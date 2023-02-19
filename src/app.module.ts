@@ -1,5 +1,6 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { DataSource } from 'typeorm';
 import { EmployeesController } from './employees/employees.controller';
 import { EmployeesModule } from './employees/employees.module';
 import { EmployeesService } from './employees/employees.service';
@@ -13,7 +14,6 @@ import { EmployeesService } from './employees/employees.service';
       synchronize: true
     })
   ],
-  controllers: [EmployeesController],
-  providers: [EmployeesService],
 })
-export class AppModule { }
+export class AppModule { 
+}
